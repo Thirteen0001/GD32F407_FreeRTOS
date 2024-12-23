@@ -1,0 +1,264 @@
+<html>
+<body>
+<pre>
+<h1>礦ision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: μVision V5.41.0.0
+Copyright (C) 2024 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: 1 Administrator, 1, LIC=ATTQ1-CRBYJ-Z9GG9-4IG64-DBAKJ-K9E6A
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Plus  Version: 5.41.0.0
+Toolchain Path:  D:\SoftWare\Keil_v5\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.22
+Assembler:       Armasm.exe V6.22
+Linker/Locator:  ArmLink.exe V6.22
+Library Manager: ArmAr.exe V6.22
+Hex Converter:   FromElf.exe V6.22
+CPU DLL:         SARMCM3.DLL V5.41.0.0
+Dialog DLL:      DCM.DLL V1.17.5.0
+Target DLL:      CMSIS_AGDI.dll V1.33.21.0
+Dialog DLL:      TCM.DLL V1.56.4.0
+ 
+<h2>Project:</h2>
+D:\桌面\黑马线下班\keil_projects_ARM\FreeRTOS_GIT\01-多任务\Project\GD32F407.uvprojx
+Project File Date:  12/23/2024
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.22', folder: 'D:\SoftWare\Keil_v5\ARM\ARMCLANG\Bin'
+Rebuild target 'Target_1'
+compiling systick.c...
+../Hardware/DHT11/DHT11.c(54): warning: illegal character encoding in string literal [-Winvalid-source-encoding]
+   54 |         printf("%s err: %d\n", "<D6><F7><BB><FA><CA>头<C5><D7><DC>时<BC><E4>", (int)cnt);
+      |                                 ^~~~~~~~~~~~~~~~~~~~ ~~~~~~~~~~~~ ~~~~~~~~
+../Hardware/DHT11/DHT11.c(59): warning: illegal character encoding in string literal [-Winvalid-source-encoding]
+   59 |     wait_level_change(0, 78, 88, "<CF><EC>应<B5>偷<E7>平时<BC><E4>");
+      |                                   ^~~~~~~~ ~~~~ ~~~~  ~~~~~~~~
+../Hardware/DHT11/DHT11.c(16): note: expanded from macro 'wait_level_change'
+   16 |                                                                                                         printf("%s err: %d\n", desc, (int)cnt); \
+      |                                                                                                                                ^~~~
+../Hardware/DHT11/DHT11.c(62): warning: illegal character encoding in string literal [-Winvalid-source-encoding]
+   62 |     wait_level_change(1, 80, 92, "<CF><EC>应<B8>叩<E7>平时<BC><E4>");
+      |                                   ^~~~~~~~ ~~~~ ~~~~  ~~~~~~~~
+../Hardware/DHT11/DHT11.c(16): note: expanded from macro 'wait_level_change'
+   16 |                                                                                                         printf("%s err: %d\n", desc, (int)cnt); \
+      |                                                                                                                                ^~~~
+../Hardware/DHT11/DHT11.c(69): warning: illegal character encoding in string literal [-Winvalid-source-encoding]
+   69 |             wait_level_change(0, 50, 58, "<D0>藕诺偷<E7>平时<BC><E4>");
+      |                                           ^~~~   ~~~~  ~~~~~~~~
+../Hardware/DHT11/DHT11.c(16): note: expanded from macro 'wait_level_change'
+   16 |                                                                                                         printf("%s err: %d\n", desc, (int)cnt); \
+      |                                                                                                                                ^~~~
+../Hardware/DHT11/DHT11.c(99): warning: illegal character encoding in string literal [-Winvalid-source-encoding]
+   99 |         printf("<CA><FD><BE><DD>校<D1><E9>失<B0><DC>\n");
+      |                 ^~~~~~~~~~~~~~~~ ~~~~~~~~ ~~~~~~~~
+5 warnings generated.
+compiling DHT11.c...
+../Hardware/MatrixKeys/MatrixKeys.c(112): error: use of undeclared identifier 'NULL'
+  112 |         if (ks != NULL) {
+      |                   ^
+1 error generated.
+compiling MatrixKeys.c...
+../Hardware/adkey/bsp_ADKey.c(1): warning: In file included from...
+../Hardware/adkey\bsp_ADKey.h(6): warning: In file included from...
+../Hardware\board_config.h(9): error: 'lib_adc.h' file not found
+    9 | #include "lib_adc.h"
+      |          ^~~~~~~~~~~
+1 error generated.
+compiling bsp_ADKey.c...
+compiling gd32f4xx_it.c...
+compiling bsp_leds.c...
+compiling bsp_keys.c...
+../Hardware/dotmatrix/bsp_dot_matrix.c(1): warning: In file included from...
+../Hardware/dotmatrix\bsp_dot_matrix.h(4): warning: In file included from...
+../Hardware\board_config.h(9): error: 'lib_adc.h' file not found
+    9 | #include "lib_adc.h"
+      |          ^~~~~~~~~~~
+1 error generated.
+compiling bsp_dot_matrix.c...
+compiling Nixie.c...
+../Hardware/EC12/bsp_EC12.c(1): warning: In file included from...
+../Hardware/EC12\bsp_EC12.h(4): warning: In file included from...
+../Hardware\board_config.h(9): error: 'lib_adc.h' file not found
+    9 | #include "lib_adc.h"
+      |          ^~~~~~~~~~~
+1 error generated.
+compiling bsp_EC12.c...
+compiling main.c...
+../Hardware/PCF8563/PCF8563.c(1): warning: In file included from...
+../Hardware/PCF8563\PCF8563.h(5): error: 'I2C.h' file not found
+    5 | #include        "I2C.h"
+      |                 ^~~~~~~
+1 error generated.
+compiling PCF8563.c...
+compiling lib_usart.c...
+compiling lib_usart0.c...
+compiling os_systick.c...
+compiling lib_exti.c...
+compiling clib_arm.c...
+compiling gd32f4xx_exti.c...
+compiling gd32f4xx_gpio.c...
+compiling gd32f4xx_misc.c...
+compiling gd32f4xx_dma.c...
+compiling gd32f4xx_pmu.c...
+compiling cmsis_os2.c...
+compiling gd32f4xx_syscfg.c...
+compiling freertos_evr.c...
+compiling system_gd32f4xx.c...
+compiling gd32f4xx_rcu.c...
+compiling croutine.c...
+compiling event_groups.c...
+compiling gd32f4xx_usart.c...
+assembling startup_gd32f407_427.s...
+compiling port.c...
+compiling list.c...
+compiling heap_4.c...
+compiling queue.c...
+compiling stream_buffer.c...
+compiling timers.c...
+compiling tasks.c...
+".\Objects\GD32F407.axf" - 5 Error(s), 5 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.9.0.pack
+                ARM::CMSIS@5.9.0
+                CMSIS (Common Microcontroller Software Interface Standard)
+   * Component: RTOS2 Version: 2.1.3
+   * Component: CORE Version: 5.6.0
+
+Package Vendor: ARM
+                https://www.keil.com/pack/ARM.CMSIS-FreeRTOS.10.5.1.pack
+                ARM::CMSIS-FreeRTOS@10.5.1
+                Bundle of FreeRTOS for Cortex-M and Cortex-A
+   * Component: FreeRTOS Variant: Cortex-M Version: 10.5.1
+   * Component: Config Variant: CMSIS RTOS2 Version: 10.5.1
+   * Component: Core Variant: Cortex-M Version: 10.5.1
+   * Component: Coroutines Version: 10.5.1
+   * Component: Event Groups Version: 10.5.1
+   * Component: Heap Variant: Heap_4 Version: 10.5.1
+   * Component: Message Buffer Version: 10.5.1
+   * Component: Stream Buffer Version: 10.5.1
+   * Component: Timers Version: 10.5.1
+
+Package Vendor: GigaDevice
+                https://gd32mcu.com/data/documents/pack/GigaDevice.GD32F4xx_DFP.3.2.0.pack
+                GigaDevice::GD32F4xx_DFP@3.2.0
+                GigaDevice GD32F4xx Series Device Support and Examples
+   * Component: Libopt Version: 3.0.2
+   * Component: Startup Version: 3.0.2
+   * Component: DMA Version: 3.0.2
+   * Component: EXTI Version: 3.0.2
+   * Component: GPIO Version: 3.0.2
+   * Component: MISC Version: 3.0.2
+   * Component: PMU Version: 3.0.2
+   * Component: RCU Version: 3.0.2
+   * Component: SYSCFG Version: 3.0.2
+   * Component: USART Version: 3.0.2
+
+<h2>Collection of Component include folders:</h2>
+  ./RTE/RTOS
+  ./RTE/_Target_1
+  D:/SoftWare/Keil_v5/ARM/Packs/ARM/CMSIS-FreeRTOS/10.5.1/CMSIS/RTOS2/FreeRTOS/Include
+  D:/SoftWare/Keil_v5/ARM/Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/include
+  D:/SoftWare/Keil_v5/ARM/Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/portable/GCC/ARM_CM4F
+  D:/SoftWare/Keil_v5/ARM/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include
+  D:/SoftWare/Keil_v5/ARM/Packs/ARM/CMSIS/5.9.0/CMSIS/RTOS2/Include
+  D:/SoftWare/Keil_v5/ARM/Packs/GigaDevice/GD32F4xx_DFP/3.2.0/Device/F4XX/Firmware/Peripherals/inc
+  D:/SoftWare/Keil_v5/ARM/Packs/GigaDevice/GD32F4xx_DFP/3.2.0/Device/F4XX/Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ::CMSIS:RTOS2(API)@2.1.3
+      Include file:  CMSIS/RTOS2/Include/cmsis_os2.h
+
+   * Component: ARM::CMSIS:CORE@5.6.0
+
+   * Component: ARM::CMSIS:RTOS2:FreeRTOS&Cortex-M@10.5.1
+      Source file:   CMSIS/RTOS2/FreeRTOS/Source/os_systick.c
+      Source file:   CMSIS/RTOS2/FreeRTOS/Source/cmsis_os2.c
+      Include file:  CMSIS/RTOS2/FreeRTOS/Include/freertos_mpool.h
+      Source file:   CMSIS/RTOS2/FreeRTOS/Source/ARM/clib_arm.c
+
+   * Component: ARM::RTOS&FreeRTOS:Config&CMSIS RTOS2@10.5.1
+      Include file:  CMSIS/RTOS2/FreeRTOS/Config/ARMCM/FreeRTOSConfig.h
+
+   * Component: ARM::RTOS&FreeRTOS:Core&Cortex-M@10.5.1
+      Include file:  Source/include/FreeRTOS.h
+      Source file:   Source/portable/GCC/ARM_CM4F/port.c
+      Include file:  Source/include/semphr.h
+      Include file:  Source/include/task.h
+      Source file:   Source/list.c
+      Source file:   Source/queue.c
+      Source file:   Source/tasks.c
+      Include file:  Source/include/queue.h
+      Source file:   CMSIS/RTOS2/FreeRTOS/Source/freertos_evr.c
+
+   * Component: ARM::RTOS&FreeRTOS:Coroutines@10.5.1
+      Include file:  Source/include/croutine.h
+      Source file:   Source/croutine.c
+
+   * Component: ARM::RTOS&FreeRTOS:Event Groups@10.5.1
+      Include file:  Source/include/event_groups.h
+      Source file:   Source/event_groups.c
+
+   * Component: ARM::RTOS&FreeRTOS:Heap&Heap_4@10.5.1
+      Source file:   Source/portable/MemMang/heap_4.c
+
+   * Component: ARM::RTOS&FreeRTOS:Message Buffer@10.5.1
+      Source file:   Source/stream_buffer.c
+      Include file:  Source/include/message_buffer.h
+
+   * Component: ARM::RTOS&FreeRTOS:Stream Buffer@10.5.1
+      Include file:  Source/include/stream_buffer.h
+      Source file:   Source/stream_buffer.c
+
+   * Component: ARM::RTOS&FreeRTOS:Timers@10.5.1
+      Source file:   Source/timers.c
+      Include file:  Source/include/timers.h
+
+   * Component: GigaDevice::Device:Libopt@3.0.2
+      Include file:  Device/F4XX/Include/gd32f4xx_libopt.h
+
+   * Component: GigaDevice::Device:Startup@3.0.2
+      Source file:   Device/F4XX/Source/ARM/startup_gd32f407_427.s
+      Include file:  Device/F4XX/Include/gd32f4xx.h
+      Source file:   Device/F4XX/Source/system_gd32f4xx.c
+
+   * Component: GigaDevice::Device:StdPeripherals:DMA@3.0.2
+      Include file:  Device/F4XX/Firmware/Peripherals/inc/gd32f4xx_dma.h
+      Source file:   Device/F4XX/Firmware/Peripherals/src/gd32f4xx_dma.c
+
+   * Component: GigaDevice::Device:StdPeripherals:EXTI@3.0.2
+      Source file:   Device/F4XX/Firmware/Peripherals/src/gd32f4xx_exti.c
+      Include file:  Device/F4XX/Firmware/Peripherals/inc/gd32f4xx_exti.h
+
+   * Component: GigaDevice::Device:StdPeripherals:GPIO@3.0.2
+      Include file:  Device/F4XX/Firmware/Peripherals/inc/gd32f4xx_gpio.h
+      Source file:   Device/F4XX/Firmware/Peripherals/src/gd32f4xx_gpio.c
+
+   * Component: GigaDevice::Device:StdPeripherals:MISC@3.0.2
+      Source file:   Device/F4XX/Firmware/Peripherals/src/gd32f4xx_misc.c
+      Include file:  Device/F4XX/Firmware/Peripherals/inc/gd32f4xx_misc.h
+
+   * Component: GigaDevice::Device:StdPeripherals:PMU@3.0.2
+      Source file:   Device/F4XX/Firmware/Peripherals/src/gd32f4xx_pmu.c
+      Include file:  Device/F4XX/Firmware/Peripherals/inc/gd32f4xx_pmu.h
+
+   * Component: GigaDevice::Device:StdPeripherals:RCU@3.0.2
+      Include file:  Device/F4XX/Firmware/Peripherals/inc/gd32f4xx_rcu.h
+      Source file:   Device/F4XX/Firmware/Peripherals/src/gd32f4xx_rcu.c
+
+   * Component: GigaDevice::Device:StdPeripherals:SYSCFG@3.0.2
+      Include file:  Device/F4XX/Firmware/Peripherals/inc/gd32f4xx_syscfg.h
+      Source file:   Device/F4XX/Firmware/Peripherals/src/gd32f4xx_syscfg.c
+
+   * Component: GigaDevice::Device:StdPeripherals:USART@3.0.2
+      Source file:   Device/F4XX/Firmware/Peripherals/src/gd32f4xx_usart.c
+      Include file:  Device/F4XX/Firmware/Peripherals/inc/gd32f4xx_usart.h
+Target not created.
+Build Time Elapsed:  00:00:04
+</pre>
+</body>
+</html>

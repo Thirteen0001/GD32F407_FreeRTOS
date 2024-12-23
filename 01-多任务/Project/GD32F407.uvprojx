@@ -340,7 +340,7 @@
               <MiscControls></MiscControls>
               <Define>HXTAL_VALUE=8000000,USE_RTOS</Define>
               <Undefine></Undefine>
-              <IncludePath>..\User;..\Libraries\usart;..\Libraries\exti;D:\SoftWare\Keil_v5\ARM\Packs\GigaDevice\GD32F4xx_DFP\3.2.0\Device\F4XX\Include;D:\SoftWare\Keil_v5\ARM\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include;.\RTE\Device\GD32F407VE;.\RTE\RTOS;.\RTE\_Target_1;D:\SoftWare\Keil_v5\ARM\Packs\ARM\CMSIS-FreeRTOS\10.5.1\CMSIS\RTOS2\FreeRTOS\Source;D:\SoftWare\Keil_v5\ARM\Packs\ARM\CMSIS-FreeRTOS\10.5.1\Source;D:\SoftWare\Keil_v5\ARM\Packs\GigaDevice\GD32F4xx_DFP\3.2.0\Device\F4XX\Firmware\Peripherals\inc;D:\SoftWare\Keil_v5\ARM\Packs\ARM\CMSIS-FreeRTOS\10.5.1\CMSIS\RTOS2\FreeRTOS\Include;..\Libraries\timer;D:\SoftWare\Keil_v5\ARM\Packs\ARM\CMSIS-FreeRTOS\10.5.1\Source\include;D:\SoftWare\Keil_v5\ARM\Packs\ARM\CMSIS-FreeRTOS\10.5.1\Source\portable\GCC\ARM_CM4F</IncludePath>
+              <IncludePath>..\User;..\Libraries\usart;..\Libraries\exti;D:\SoftWare\Keil_v5\ARM\Packs\GigaDevice\GD32F4xx_DFP\3.2.0\Device\F4XX\Include;D:\SoftWare\Keil_v5\ARM\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include;.\RTE\Device\GD32F407VE;.\RTE\RTOS;.\RTE\_Target_1;D:\SoftWare\Keil_v5\ARM\Packs\ARM\CMSIS-FreeRTOS\10.5.1\CMSIS\RTOS2\FreeRTOS\Source;D:\SoftWare\Keil_v5\ARM\Packs\ARM\CMSIS-FreeRTOS\10.5.1\Source;D:\SoftWare\Keil_v5\ARM\Packs\GigaDevice\GD32F4xx_DFP\3.2.0\Device\F4XX\Firmware\Peripherals\inc;D:\SoftWare\Keil_v5\ARM\Packs\ARM\CMSIS-FreeRTOS\10.5.1\CMSIS\RTOS2\FreeRTOS\Include;..\Libraries\timer;D:\SoftWare\Keil_v5\ARM\Packs\ARM\CMSIS-FreeRTOS\10.5.1\Source\include;D:\SoftWare\Keil_v5\ARM\Packs\ARM\CMSIS-FreeRTOS\10.5.1\Source\portable\GCC\ARM_CM4F;..\Hardware</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -409,6 +409,46 @@
               <FileType>1</FileType>
               <FilePath>..\Hardware\leds\bsp_leds.c</FilePath>
             </File>
+            <File>
+              <FileName>bsp_ADKey.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Hardware\adkey\bsp_ADKey.c</FilePath>
+            </File>
+            <File>
+              <FileName>DHT11.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Hardware\DHT11\DHT11.c</FilePath>
+            </File>
+            <File>
+              <FileName>bsp_dot_matrix.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Hardware\dotmatrix\bsp_dot_matrix.c</FilePath>
+            </File>
+            <File>
+              <FileName>bsp_EC12.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Hardware\EC12\bsp_EC12.c</FilePath>
+            </File>
+            <File>
+              <FileName>bsp_keys.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Hardware\keys\bsp_keys.c</FilePath>
+            </File>
+            <File>
+              <FileName>MatrixKeys.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Hardware\MatrixKeys\MatrixKeys.c</FilePath>
+            </File>
+            <File>
+              <FileName>Nixie.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Hardware\NIXIE\Nixie.c</FilePath>
+            </File>
+            <File>
+              <FileName>PCF8563.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Hardware\PCF8563\PCF8563.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -423,6 +463,26 @@
               <FileName>Exti_config.h</FileName>
               <FileType>5</FileType>
               <FilePath>..\Libraries\exti\Exti_config.h</FilePath>
+            </File>
+            <File>
+              <FileName>ADC_config.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Libraries\adc\ADC_config.h</FilePath>
+            </File>
+            <File>
+              <FileName>I2C_config.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Libraries\i2c\I2C_config.h</FilePath>
+            </File>
+            <File>
+              <FileName>SPI_config.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Libraries\spi\SPI_config.h</FilePath>
+            </File>
+            <File>
+              <FileName>Timer_config.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Libraries\timer\Timer_config.h</FilePath>
             </File>
           </Files>
         </Group>
@@ -450,6 +510,35 @@
               <FilePath>..\Libraries\exti\lib_exti.c</FilePath>
             </File>
           </Files>
+        </Group>
+        <Group>
+          <GroupName>App</GroupName>
+          <Files>
+            <File>
+              <FileName>App.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\App\App.h</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>broad</GroupName>
+          <Files>
+            <File>
+              <FileName>board_config.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Hardware\board_config.h</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>libs/timer</GroupName>
+        </Group>
+        <Group>
+          <GroupName>lib/adc</GroupName>
+        </Group>
+        <Group>
+          <GroupName>libs/i2c</GroupName>
         </Group>
         <Group>
           <GroupName>::CMSIS</GroupName>
