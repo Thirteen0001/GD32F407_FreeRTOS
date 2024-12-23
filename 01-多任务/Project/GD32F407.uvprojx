@@ -340,7 +340,7 @@
               <MiscControls></MiscControls>
               <Define>HXTAL_VALUE=8000000,USE_RTOS</Define>
               <Undefine></Undefine>
-              <IncludePath>..\User;..\Libraries\usart;..\Libraries\exti</IncludePath>
+              <IncludePath>..\User;..\Libraries\usart;..\Libraries\exti;D:\SoftWare\Keil_v5\ARM\Packs\GigaDevice\GD32F4xx_DFP\3.2.0\Device\F4XX\Include;D:\SoftWare\Keil_v5\ARM\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include;.\RTE\Device\GD32F407VE;.\RTE\RTOS;.\RTE\_Target_1;D:\SoftWare\Keil_v5\ARM\Packs\ARM\CMSIS-FreeRTOS\10.5.1\CMSIS\RTOS2\FreeRTOS\Source;D:\SoftWare\Keil_v5\ARM\Packs\ARM\CMSIS-FreeRTOS\10.5.1\Source;D:\SoftWare\Keil_v5\ARM\Packs\GigaDevice\GD32F4xx_DFP\3.2.0\Device\F4XX\Firmware\Peripherals\inc;D:\SoftWare\Keil_v5\ARM\Packs\ARM\CMSIS-FreeRTOS\10.5.1\CMSIS\RTOS2\FreeRTOS\Include;..\Libraries\timer;D:\SoftWare\Keil_v5\ARM\Packs\ARM\CMSIS-FreeRTOS\10.5.1\Source\include;D:\SoftWare\Keil_v5\ARM\Packs\ARM\CMSIS-FreeRTOS\10.5.1\Source\portable\GCC\ARM_CM4F</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
