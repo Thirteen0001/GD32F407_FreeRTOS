@@ -27,7 +27,25 @@ Project File Date:  12/23/2024
 <h2>Output:</h2>
 *** Using Compiler 'V6.22', folder: 'D:\SoftWare\Keil_v5\ARM\ARMCLANG\Bin'
 Rebuild target 'Target_1'
+compiling bsp_keys.c...
+compiling main.c...
+compiling gd32f4xx_it.c...
+compiling Nixie.c...
 compiling systick.c...
+compiling bsp_leds.c...
+../Hardware/MatrixKeys/MatrixKeys.c(112): error: use of undeclared identifier 'NULL'
+  112 |         if (ks != NULL) {
+      |                   ^
+1 error generated.
+compiling MatrixKeys.c...
+../Hardware/EC12/bsp_EC12.c(63): error: call to undeclared function 'get_current_tick_us'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+   63 |         uint32_t current_time = CURRENT_TICK_MS();
+      |                                 ^
+../Hardware\board_config.h(14): note: expanded from macro 'CURRENT_TICK_MS'
+   14 | #define CURRENT_TICK_MS()       (get_current_tick_us() / 1000)
+      |                                  ^
+1 error generated.
+compiling bsp_EC12.c...
 ../Hardware/DHT11/DHT11.c(54): warning: illegal character encoding in string literal [-Winvalid-source-encoding]
    54 |         printf("%s err: %d\n", "<D6><F7><BB><FA><CA>ͷ<C5><D7><DC>ʱ<BC><E4>", (int)cnt);
       |                                 ^~~~~~~~~~~~~~~~~~~~ ~~~~~~~~~~~~ ~~~~~~~~
@@ -54,70 +72,172 @@ compiling systick.c...
       |                 ^~~~~~~~~~~~~~~~ ~~~~~~~~ ~~~~~~~~
 5 warnings generated.
 compiling DHT11.c...
-../Hardware/MatrixKeys/MatrixKeys.c(112): error: use of undeclared identifier 'NULL'
-  112 |         if (ks != NULL) {
-      |                   ^
-1 error generated.
-compiling MatrixKeys.c...
-../Hardware/adkey/bsp_ADKey.c(1): warning: In file included from...
-../Hardware/adkey\bsp_ADKey.h(6): warning: In file included from...
-../Hardware\board_config.h(9): error: 'lib_adc.h' file not found
-    9 | #include "lib_adc.h"
-      |          ^~~~~~~~~~~
-1 error generated.
 compiling bsp_ADKey.c...
-compiling gd32f4xx_it.c...
-compiling bsp_leds.c...
-compiling bsp_keys.c...
-../Hardware/dotmatrix/bsp_dot_matrix.c(1): warning: In file included from...
-../Hardware/dotmatrix\bsp_dot_matrix.h(4): warning: In file included from...
-../Hardware\board_config.h(9): error: 'lib_adc.h' file not found
-    9 | #include "lib_adc.h"
-      |          ^~~~~~~~~~~
-1 error generated.
+../Hardware/dotmatrix/bsp_dot_matrix.c(37): error: call to undeclared function 'lib_spi2_write'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+   37 |                 DM_WR(0x09);
+      |                 ^
+../Hardware\board_config.h(79): note: expanded from macro 'DM_WR'
+   79 | #define DM_WR(dat)                      lib_spi2_write(dat)
+      |                                         ^
+../Hardware/dotmatrix/bsp_dot_matrix.c(37): note: did you mean 'lib_spi0_write'?
+../Hardware\board_config.h(79): note: expanded from macro 'DM_WR'
+   79 | #define DM_WR(dat)                      lib_spi2_write(dat)
+      |                                         ^
+../Libraries/spi\lib_spi0.h(11): note: 'lib_spi0_write' declared here
+   11 | void lib_spi0_write(uint8_t data);
+      |      ^
+../Hardware/dotmatrix/bsp_dot_matrix.c(46): error: call to undeclared function 'lib_spi2_write'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+   46 |                 DM_WR(0x0a);
+      |                 ^
+../Hardware\board_config.h(79): note: expanded from macro 'DM_WR'
+   79 | #define DM_WR(dat)                      lib_spi2_write(dat)
+      |                                         ^
+../Hardware/dotmatrix/bsp_dot_matrix.c(55): error: call to undeclared function 'lib_spi2_write'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+   55 |                 DM_WR(0x0b);
+      |                 ^
+../Hardware\board_config.h(79): note: expanded from macro 'DM_WR'
+   79 | #define DM_WR(dat)                      lib_spi2_write(dat)
+      |                                         ^
+../Hardware/dotmatrix/bsp_dot_matrix.c(64): error: call to undeclared function 'lib_spi2_write'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+   64 |                 DM_WR(0x0c);
+      |                 ^
+../Hardware\board_config.h(79): note: expanded from macro 'DM_WR'
+   79 | #define DM_WR(dat)                      lib_spi2_write(dat)
+      |                                         ^
+../Hardware/dotmatrix/bsp_dot_matrix.c(73): error: call to undeclared function 'lib_spi2_write'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+   73 |                 DM_WR(0x0f);
+      |                 ^
+../Hardware\board_config.h(79): note: expanded from macro 'DM_WR'
+   79 | #define DM_WR(dat)                      lib_spi2_write(dat)
+      |                                         ^
+../Hardware/dotmatrix/bsp_dot_matrix.c(209): error: call to undeclared function 'lib_spi2_dma_write'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+  209 |         lib_spi2_dma_write((uint32_t)(buff[0]), DM_NUM * 2);
+      |         ^
+../Hardware/dotmatrix/bsp_dot_matrix.c(209): note: did you mean 'lib_spi0_write'?
+../Libraries/spi\lib_spi0.h(11): note: 'lib_spi0_write' declared here
+   11 | void lib_spi0_write(uint8_t data);
+      |      ^
+../Hardware/dotmatrix/bsp_dot_matrix.c(223): error: call to undeclared function 'lib_spi2_dma_write'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+  223 |         lib_spi2_dma_write((uint32_t)(buff[i]), DM_NUM * 2);
+      |         ^
+7 errors generated.
 compiling bsp_dot_matrix.c...
-compiling Nixie.c...
-../Hardware/EC12/bsp_EC12.c(1): warning: In file included from...
-../Hardware/EC12\bsp_EC12.h(4): warning: In file included from...
-../Hardware\board_config.h(9): error: 'lib_adc.h' file not found
-    9 | #include "lib_adc.h"
-      |          ^~~~~~~~~~~
-1 error generated.
-compiling bsp_EC12.c...
-compiling main.c...
 ../Hardware/PCF8563/PCF8563.c(1): warning: In file included from...
 ../Hardware/PCF8563\PCF8563.h(5): error: 'I2C.h' file not found
     5 | #include        "I2C.h"
       |                 ^~~~~~~
 1 error generated.
 compiling PCF8563.c...
+../Libraries/adc/lib_adc.c(6): error: call to undeclared function 'adc_deinit'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+    6 |     adc_deinit();
+      |     ^
+../Libraries/adc/lib_adc.c(8): error: call to undeclared function 'adc_clock_config'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+    8 |     adc_clock_config(ADC_CLK);// Ck_ADC 10.5MHZ, <BC><C6><CB><E3><B3><F6>1<B4><CE><CF><FB><BA>ĵ<C4>ʱ<B3><A4> 1s/21MHZ
+      |     ^
+../Libraries/adc/lib_adc.c(8): error: use of undeclared identifier 'ADC_ADCCK_PCLK2_DIV8'
+    8 |     adc_clock_config(ADC_CLK);// Ck_ADC 10.5MHZ, <BC><C6><CB><E3><B3><F6>1<B4><CE><CF><FB><BA>ĵ<C4>ʱ<B3><A4> 1s/21MHZ
+      |                      ^
+../Libraries/adc\ADC_config.h(13): note: expanded from macro 'ADC_CLK'
+   13 | #define ADC_CLK         ADC_ADCCK_PCLK2_DIV8
+      |                         ^
+3 errors generated.
+compiling lib_adc.c...
 compiling lib_usart.c...
 compiling lib_usart0.c...
-compiling os_systick.c...
-compiling lib_exti.c...
 compiling clib_arm.c...
+compiling lib_exti.c...
+../Libraries/adc/lib_adc0.c(8): error: use of undeclared identifier 'ADC_CHANNEL_2'
+    8 | static uint8_t  adc_chns[ADC0_CHNS_LEN] = ADC0_CHNS;
+      |                                           ^
+../Libraries/adc\ADC_config.h(23): note: expanded from macro 'ADC0_CHNS'
+   23 |                                                                 ADC_CHANNEL_2,          \
+      |                                                                 ^
+../Libraries/adc/lib_adc0.c(9): error: use of undeclared identifier 'ADC_SAMPLETIME_480'
+    9 | static uint32_t adc_chns_samples[ADC0_CHNS_LEN] = ADC0_CHNS_SAMPLES;
+      |                                                   ^
+../Libraries/adc\ADC_config.h(27): note: expanded from macro 'ADC0_CHNS_SAMPLES'
+   27 |                                                                 ADC_SAMPLETIME_480,     \
+      |                                                                 ^
+../Libraries/adc/lib_adc0.c(24): error: call to undeclared function 'ADC_RDATA'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+   24 |     uint32_t dmax_src = (uint32_t)(&ADC_RDATA(ADC0));
+      |                                     ^
+../Libraries/adc/lib_adc0.c(24): error: use of undeclared identifier 'ADC0'
+   24 |     uint32_t dmax_src = (uint32_t)(&ADC_RDATA(ADC0));
+      |                                               ^
+../Libraries/adc/lib_adc0.c(78): error: use of undeclared identifier 'ADC_CHANNEL_0'
+   78 |                 if(adc_chns[i] == ADC_CHANNEL_0) {
+      |                                   ^
+../Libraries/adc/lib_adc0.c(80): error: use of undeclared identifier 'ADC_CHANNEL_1'
+   80 |                 } else if(adc_chns[i] == ADC_CHANNEL_1) {
+      |                                          ^
+../Libraries/adc/lib_adc0.c(82): error: use of undeclared identifier 'ADC_CHANNEL_2'
+   82 |                 } else if(adc_chns[i] == ADC_CHANNEL_2) {
+      |                                          ^
+../Libraries/adc/lib_adc0.c(84): error: use of undeclared identifier 'ADC_CHANNEL_3'
+   84 |                 } else if(adc_chns[i] == ADC_CHANNEL_3) {
+      |                                          ^
+../Libraries/adc/lib_adc0.c(94): error: call to undeclared function 'adc_resolution_config'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+   94 |     adc_resolution_config(ADC0, ADC0_RESOLUTION); // <B7>ֱ<E6><C2><CA>
+      |     ^
+../Libraries/adc/lib_adc0.c(94): error: use of undeclared identifier 'ADC0'
+   94 |     adc_resolution_config(ADC0, ADC0_RESOLUTION); // <B7>ֱ<E6><C2><CA>
+      |                           ^
+../Libraries/adc/lib_adc0.c(94): error: use of undeclared identifier 'ADC_RESOLUTION_12B'
+   94 |     adc_resolution_config(ADC0, ADC0_RESOLUTION); // <B7>ֱ<E6><C2><CA>
+      |                                 ^
+../Libraries/adc\ADC_config.h(18): note: expanded from macro 'ADC0_RESOLUTION'
+   18 | #define ADC0_RESOLUTION         ADC_RESOLUTION_12B
+      |                                 ^
+../Libraries/adc/lib_adc0.c(95): error: call to undeclared function 'adc_data_alignment_config'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+   95 |     adc_data_alignment_config(ADC0, ADC_DATAALIGN_RIGHT);// <CA><FD><BE><DD><D3>Ҷ<D4><C6><EB>
+      |     ^
+../Libraries/adc/lib_adc0.c(95): error: use of undeclared identifier 'ADC0'
+   95 |     adc_data_alignment_config(ADC0, ADC_DATAALIGN_RIGHT);// <CA><FD><BE><DD><D3>Ҷ<D4><C6><EB>
+      |                               ^
+../Libraries/adc/lib_adc0.c(95): error: use of undeclared identifier 'ADC_DATAALIGN_RIGHT'
+   95 |     adc_data_alignment_config(ADC0, ADC_DATAALIGN_RIGHT);// <CA><FD><BE><DD><D3>Ҷ<D4><C6><EB>
+      |                                     ^
+../Libraries/adc/lib_adc0.c(99): error: call to undeclared function 'adc_channel_length_config'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+   99 |         adc_channel_length_config(ADC0, ADC_ROUTINE_CHANNEL, ADC0_CHNS_LEN);
+      |         ^
+../Libraries/adc/lib_adc0.c(99): error: use of undeclared identifier 'ADC0'
+   99 |         adc_channel_length_config(ADC0, ADC_ROUTINE_CHANNEL, ADC0_CHNS_LEN);
+      |                                   ^
+../Libraries/adc/lib_adc0.c(99): error: use of undeclared identifier 'ADC_ROUTINE_CHANNEL'
+   99 |         adc_channel_length_config(ADC0, ADC_ROUTINE_CHANNEL, ADC0_CHNS_LEN);
+      |                                         ^
+../Libraries/adc/lib_adc0.c(101): error: call to undeclared function 'adc_routine_channel_config'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+  101 |                 adc_routine_channel_config(ADC0, i, adc_chns[i], adc_chns_samples[i]);
+      |                 ^
+../Libraries/adc/lib_adc0.c(101): error: use of undeclared identifier 'ADC0'
+  101 |                 adc_routine_channel_config(ADC0, i, adc_chns[i], adc_chns_samples[i]);
+      |                                            ^
+fatal error: too many errors emitted, stopping now [-ferror-limit=]
+20 errors generated.
+compiling lib_adc0.c...
+compiling os_systick.c...
+compiling cmsis_os2.c...
+compiling gd32f4xx_dma.c...
 compiling gd32f4xx_exti.c...
 compiling gd32f4xx_gpio.c...
 compiling gd32f4xx_misc.c...
-compiling gd32f4xx_dma.c...
-compiling gd32f4xx_pmu.c...
-compiling cmsis_os2.c...
 compiling gd32f4xx_syscfg.c...
-compiling freertos_evr.c...
-compiling system_gd32f4xx.c...
-compiling gd32f4xx_rcu.c...
-compiling croutine.c...
-compiling event_groups.c...
 compiling gd32f4xx_usart.c...
-assembling startup_gd32f407_427.s...
+compiling gd32f4xx_pmu.c...
+compiling gd32f4xx_rcu.c...
+compiling system_gd32f4xx.c...
+compiling croutine.c...
 compiling port.c...
+assembling startup_gd32f407_427.s...
 compiling list.c...
+compiling freertos_evr.c...
 compiling heap_4.c...
-compiling queue.c...
+compiling event_groups.c...
 compiling stream_buffer.c...
-compiling timers.c...
+compiling queue.c...
 compiling tasks.c...
-".\Objects\GD32F407.axf" - 5 Error(s), 5 Warning(s).
+compiling timers.c...
+".\Objects\GD32F407.axf" - 32 Error(s), 5 Warning(s).
 
 <h2>Software Packages used:</h2>
 

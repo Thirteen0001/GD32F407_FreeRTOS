@@ -19,6 +19,9 @@
                 "D:\\SoftWare\\Keil_v5\\ARM\\Packs\\ARM\\CMSIS-FreeRTOS\\10.5.1\\Source\\include",
                 "D:\\SoftWare\\Keil_v5\\ARM\\Packs\\ARM\\CMSIS-FreeRTOS\\10.5.1\\Source\\portable\\GCC\\ARM_CM4F",
                 "d:\\桌面\\黑马线下班\\keil_projects_ARM\\FreeRTOS_GIT\\01-多任务\\Hardware",
+                "d:\\桌面\\黑马线下班\\keil_projects_ARM\\FreeRTOS_GIT\\01-多任务\\Libraries\\adc",
+                "d:\\桌面\\黑马线下班\\keil_projects_ARM\\FreeRTOS_GIT\\01-多任务\\Libraries\\i2c",
+                "d:\\桌面\\黑马线下班\\keil_projects_ARM\\FreeRTOS_GIT\\01-多任务\\Libraries\\spi",
                 "D:\\SoftWare\\Keil_v5\\ARM\\ARMCLANG\\include",
                 "D:\\SoftWare\\Keil_v5\\ARM\\ARMCLANG\\include\\arm_linux",
                 "D:\\SoftWare\\Keil_v5\\ARM\\ARMCLANG\\include\\arm_linux_compat",
@@ -32,9 +35,6 @@
                 "d:\\桌面\\黑马线下班\\keil_projects_ARM\\FreeRTOS_GIT\\01-多任务\\Hardware\\MatrixKeys",
                 "d:\\桌面\\黑马线下班\\keil_projects_ARM\\FreeRTOS_GIT\\01-多任务\\Hardware\\NIXIE",
                 "d:\\桌面\\黑马线下班\\keil_projects_ARM\\FreeRTOS_GIT\\01-多任务\\Hardware\\PCF8563",
-                "d:\\桌面\\黑马线下班\\keil_projects_ARM\\FreeRTOS_GIT\\01-多任务\\Libraries\\adc",
-                "d:\\桌面\\黑马线下班\\keil_projects_ARM\\FreeRTOS_GIT\\01-多任务\\Libraries\\i2c",
-                "d:\\桌面\\黑马线下班\\keil_projects_ARM\\FreeRTOS_GIT\\01-多任务\\Libraries\\spi",
                 "d:\\桌面\\黑马线下班\\keil_projects_ARM\\FreeRTOS_GIT\\01-多任务\\App"
             ],
             "defines": [
